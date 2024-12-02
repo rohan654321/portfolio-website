@@ -1,0 +1,128 @@
+.skills-container {
+  background-color: #f0f2f5;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20vh; 
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  color: #4caf50; /* Custom color for the icons */
+}
+
+.skill-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #444;
+  flex-grow: 1;
+}
+
+.skill-bar-container {
+  background-color: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.skill-bar {
+  height: 100%;
+  background-color: #4caf50; /* Green color for the bar */
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 30px; /* Adjust padding for smaller screens */
+    margin-top: 10vh; /* Reduce margin for better spacing */
+  }
+
+  .skills-title {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .skills-list {
+    gap: 18px; /* Reduce gap between skill items */
+  }
+
+  .skill-header {
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .skill-icon {
+    font-size: 1.8rem; /* Slightly smaller icons */
+  }
+
+  .skill-name {
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+  }
+
+  .skill-bar-container {
+    height: 8px; /* Slightly smaller bar height */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    padding: 20px; /* Further reduce padding for small mobile screens */
+    margin-top: 5vh;
+  }
+
+  .skills-title {
+    font-size: 1.75rem; /* Adjust title font size for small screens */
+  }
+
+  .skills-list {
+    gap: 15px; /* Reduce gap further */
+  }
+
+  .skill-header {
+    flex-direction: column; /* Keep stacked layout */
+    align-items: flex-start;
+  }
+
+  .skill-icon {
+    font-size: 1.5rem; /* Smaller icons for small screens */
+  }
+
+  .skill-name {
+    font-size: 1rem; /* Further adjust text size */
+  }
+
+  .skill-bar-container {
+    height: 6px; /* Smaller bar height for mobile */
+  }
+}

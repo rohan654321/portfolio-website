@@ -1,0 +1,178 @@
+/* Navbar Styling */
+nav {
+  background-color: #333; /* Dark background for the navbar */
+  color: white; /* White text color for visibility */
+  padding: 1rem; /* Add padding for better spacing */
+  position: fixed; /* Fix navbar at the top of the page */
+  width: 100%; /* Ensure it spans the full width */
+  top: 0; /* Align it to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff; /* Fallback color */
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #fd3a69);
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c, #fd3a69);
+  transition: width 0.3s ease-in-out;
+}
+
+h1:hover {
+  background: linear-gradient(90deg, #5b86e5, #36d1dc);
+  background-clip: text;
+  color: #33333325;
+}
+
+h1:hover::after {
+  width: 100%;
+}
+
+ul {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Arrange items in a row */
+  gap: 1.5rem; /* Add space between items */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+ul a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Ensure links are visible */
+  font-size: 1rem;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+ul a:hover {
+  color: #ff6347; /* Highlight links on hover (tomato color) */
+}
+
+ul li {
+  cursor: pointer; /* Pointer cursor for clarity */
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile Popup Menu */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #444;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid #ff6347;
+  animation: fadeIn 0.3s ease;
+}
+
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background: #555; /* Slightly darker background on hover */
+  color: #ff6347; /* Highlight link on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Remove bullets and adjust spacing in the popup */
+.mobile-menu ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  ul {
+    gap: 1rem;
+  }
+
+  ul a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none; /* Hide the desktop menu */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  .mobile-menu {
+    display: flex; /* Display mobile menu as a column */
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu a {
+    font-size: 0.75rem;
+  }
+}

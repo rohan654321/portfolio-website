@@ -1,0 +1,93 @@
+.about {
+  min-height: 100vh;
+  background-color: #ffffff; /* White background */
+  color: #2d3748; /* Dark gray text */
+  padding: 5rem 1rem; /* Vertical padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Ensures proper stacking on smaller screens */
+}
+
+.about-container {
+  max-width: 800px; /* Centered content with a fixed width */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a202c; /* Slightly darker gray */
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #3182ce; /* Blue accent line */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.about p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4a5568; /* Medium gray */
+}
+
+.about p span {
+  font-weight: bold;
+  color: #3182ce; /* Blue text for highlights */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container {
+      padding: 1.5rem;
+  }
+
+  .about h2 {
+      font-size: 2.25rem;
+  }
+
+  .about p {
+      font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+      padding: 3rem 1rem;
+  }
+
+  .about-container {
+      max-width: 90%;
+  }
+
+  .about h2 {
+      font-size: 2rem;
+  }
+
+  .about p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+      padding: 2rem 1rem;
+  }
+
+  .about h2 {
+      font-size: 1.75rem;
+  }
+
+  .about p {
+      font-size: 0.875rem;
+  }
+}
