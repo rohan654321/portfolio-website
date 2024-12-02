@@ -19,7 +19,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:1000/data", data);
+      const response = await axios.post("https://portfolio-backend-gaje.onrender.com/data", data);
       console.log(response.data.message);
       alert("Message sent successfully!");
     } catch (error) {
